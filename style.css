@@ -1,8 +1,21 @@
 body {
-    background-color: darkslategray;
-    color: white;
+    background-color: var(--primary-page-bg);
+    color: var(--primary-page-bg);
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px;
+
+
+    --primary-page-bg: #eaebeb;
+    --accent-color: #F05605;
+    --primary-text-color: #353D44;
+    --title-panel-bg: #f2f2f2;
+}
+body.dark {
+    --primary-text-color: #FDFDFD;
+    --title-panel-bg: #353d44;
+    --sinppet-panel-bg: #21262B;
+
+
 }
 a {
     color: gold;
@@ -13,6 +26,6 @@ img {
     border-radius: 50%;
 }
 li {
-    margin-left: 50px;
+    margin-left: 85px;
     line-height: 200%;
 }

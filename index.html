@@ -6,12 +6,42 @@
     <title>My Profile Card</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark">
     <title>KUZMO</title>
     <h1><a href="music.html">KUZMO</a></h1>
     <h2>Marcus Harrison Kuzmarov</h2>
     <img src="imgs/island.jpg" alt="island by kuzmo">
 
+    <header>
+        <div class="input-container">
+            <input type="text" id="songSearch" class="song-search">
+            <img src="imgs/search.png" alt="search">
+        </div>
+    </header>
+
+    <main class="song-name-container">
+        <button class="toggle-theme-btn" id="ToggleThemeBtn">
+            <i class = "fa-solid fa-toggle-off"></i>
+        </button>
+    </main>
+    
+
+    <div class="wrapper">
+        <div id="songContainer" class="song-container">
+            <div class="song-card">
+                <div class="song-header">
+
+                </div>
+                <div class="song-content">
+                    <h1 class="title">MK Ultra</h1>
+                    <h1 class="title">Karcus Muzmarov</h1>
+
+                    <p>we out here</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
     <ul>
         <li>location: Toronto, ON</li>
         <li>skills: people n words</li>
@@ -19,6 +49,6 @@
     </ul>
 
 
-
+    <script src="script.js"></script>
 </body>
 </html>
