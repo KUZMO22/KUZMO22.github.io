@@ -5,7 +5,14 @@ body {
     margin: 20px;
 }
 a {
+    color: gold;
+}
+img {
     width: 400px;
     border: 5px solid-white;
     border-radius: 50%;
+}
+li {
+    margin-left: 50px;
+    line-height: 200%;
 }
