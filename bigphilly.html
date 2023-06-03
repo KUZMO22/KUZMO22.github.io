@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Philly!!!!</title>
+    <link rel="icon" type="image/png" href="imgs/STOPME.png" class="circular-favicon">
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+    <div class="audioPlayer">
+        <audio id="audioPlayer"></audio>
+        <div class="playlist">
+            <ul>
+                <li data-src="bigphilly_audio\6kiss.mp3">six kiss</li>
+                <li data-src="bigphilly_audio\candy.mp3">candy</li>
+                <li data-src="bigphilly_audio\cstl.mp3">choppa shoot the loudest</li>
+                <li data-src="bigphilly_audio\sitd.mp3">shots in the dark</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="player-controls">
+        <button id="prev-button">Previous</button>
+        <button id="play-button">Play</button>
+        <button id="next-button">Next</button>
+    </div>
+    <div class="progress-bar">
+        <div class="progress" id="progressBar"></div>
+        <input type="range" id="seekSlider" min="0" step="1" value="0" />
+    </div>
+
+
+    <script src="script3.js"></script>
+</body>
+
+</html>

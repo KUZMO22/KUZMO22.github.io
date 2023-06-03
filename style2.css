@@ -1,0 +1,91 @@
+body {
+    background-color: var(--primary-page-bg);
+    color: var(--primary-page-bg);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+
+
+    --primary-page-bg: #eaebeb;
+    --accent-color: #F05605;
+    --primary-text-color: #353D44;
+    --title-panel-bg: #f2f2f2;
+}
+body.dark {
+    --primary-text-color: #FDFDFD;
+    --title-panel-bg: #353d44;
+    --sinppet-panel-bg: #21262B;
+}
+.circular-favicon {
+    background-color: #ffffff; /* Set the background color for the circular shape */
+    border-radius: 50%; /* Create a circular shape with 50% border-radius */
+    padding: 5px; /* Adjust padding as needed */
+}
+
+.audio-player {
+    width: 400px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    align-self: center;
+}  
+.playlist ul {
+    list-style: none;
+    padding: 0;
+} 
+.playlist li {
+    cursor: pointer;
+    padding: 5px;
+} 
+.playlist li:hover {
+    background-color: #e5e5e5;
+} 
+.player-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+} 
+.player-controls button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}  
+.progress-bar {
+    height: 5px;
+    background-color: #ddd;
+    margin-top: 10px;
+    position: relative;
+}
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0%;
+    transition: width 0.2s ease;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+}
+.wrapper {
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+h1, h2 {
+    margin: 30px 0;
+    text-align: center;
+}
+video, audio, .mejs-treehouse {
+    margin: 0 auto;
+    display: block;
+}
