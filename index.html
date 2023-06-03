@@ -42,15 +42,17 @@
             
         </div>
     </div>
-    <ul>
-        <li>location: Toronto, ON</li>
-        <li>skills: people n words</li>
-        <li>hobbies: tunes n scores</li>
-    </ul>
+    <div class="about-me">
+        <ul>
+            <li>location: Toronto, ON</li>
+            <li>skills: people n words</li>
+            <li>hobbies: tunes n scores</li>
+        </ul>
+    </div>
 
     <h1>SONGS</h1>
     <div class="audio-player">
-        <audio id="audio" controls></audio>
+        <audio id="audio"></audio>
         <div class="playlist">
             <ul>
                 <li data-src="audio\goslowly.wav">Untitled220 (go slowly) Copy1</li>
@@ -59,6 +61,15 @@
             </ul>
         </div>
     </div>
+
+    <div class="player-controls">
+        <button id="prev-button">Previous</button>
+        <button id="play-button">Play</button>
+        <button id="next-button">Next</button>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
 
 
     <script src="script.js"></script>

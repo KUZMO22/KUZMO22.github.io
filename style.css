@@ -23,27 +23,52 @@ img {
     border: 5px solid-white;
     border-radius: 50%;
 }
-li {
+.about-me {
     margin-left: 85px;
     line-height: 200%;
 }
 .audio-player {
     width: 400px;
-}
-.playlist {
-    margin-top: 10px;
-}
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    align-self: center;
+}  
 .playlist ul {
     list-style: none;
     padding: 0;
-}
-  
+} 
 .playlist li {
     cursor: pointer;
-}
-  
+    padding: 5px;
+} 
 .playlist li:hover {
-    text-decoration: underline;
+    background-color: #e5e5e5;
+} 
+.player-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+} 
+.player-controls button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}  
+.progress-bar {
+    height: 5px;
+    background-color: #ddd;
+    margin-top: 10px;
+    position: relative;
+}
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0%;
+    transition: width 0.2s ease;
 }
 
 *, *:before, *:after {
