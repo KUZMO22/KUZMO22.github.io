@@ -10,3 +10,16 @@ songSearch.addEventListener('keyup', e => {
         }
     });
 });
+
+window.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('audio');
+    const playlistItems = document.querySelectorAll('.playlist li');
+  
+    playlistItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            const source = this.getAttribute('data-src');
+            audio.src = source;
+            audio.play();
+        });
+    });
+});
