@@ -18,6 +18,8 @@ window.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.getElementById('prev-button');
     const nextButton = document.getElementById('next-button');
     const progressBar = document.querySelector('.progress');
+    let songSelected = false;
+
     let currentIndex = 0;
   
     playlistItems.forEach(function(item, index) {
@@ -29,7 +31,14 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   
     playButton.addEventListener('click', function() {
-        if (audio.paused) {
+        if(!songSelected) {
+            playSong('bigphilly_audio/sixkiss.mp3');
+            updatePlaylist();
+            songSelected = true;
+            audio.play()
+            playButton.textContent = 'Pause';
+        }
+        else if (audio.paused) {
             audio.play();
             playButton.textContent = 'Pause';
         } else {
@@ -80,7 +89,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 var audioPlayer = document.getElementById("audioPlayer");
 var seekSlider = document.getElementById("seekSlider");
-var progressBar = document.getElementById("progressBar");
+var progress = document.getElementById("progress");
 
 audioPlayer.addEventListener("loadedmetadata", function() {
   seekSlider.max = audioPlayer.duration;
@@ -88,18 +97,27 @@ audioPlayer.addEventListener("loadedmetadata", function() {
 
 seekSlider.addEventListener("input", function() {
   audioPlayer.currentTime = seekSlider.value;
-  updateProgressBar();
+  updateProgress();
 });
 
 audioPlayer.addEventListener("timeupdate", function() {
   seekSlider.value = audioPlayer.currentTime;
-  updateProgressBar();
+  updateProgress();
 });
 
-function updateProgressBar() {
-  var progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-  progressBar.style.width = progress + "%";
+progress.addEventListener("click", function(event) {
+  var progressWidth = this.offsetWidth;
+  var clickedPosition = event.offsetX;
+  var seekPosition = (clickedPosition / progressWidth) * audioPlayer.duration;
+  audioPlayer.currentTime = seekPosition;
+  updateProgress();
+});
+
+function updateProgress() {
+  var progressWidth = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+  progress.style.width = progressWidth + "%";
 }
+
 
 
     

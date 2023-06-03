@@ -26,7 +26,7 @@ body.dark {
     background-color: #f1f1f1;
     padding: 10px;
     border-radius: 5px;
-    align-self: center;
+    position: relative;
 }  
 .playlist ul {
     list-style: none;
@@ -52,42 +52,38 @@ body.dark {
     cursor: pointer;
     border-radius: 5px;
 }  
+
+  
+#progressBar {
+    width: 100%;
+    height: 10px;
+    margin-top: 10px;
+    background-color: #ccc;
+    position: relative;
+    cursor: pointer;
+}
+  
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: #0000FF;
+}
+  
+#seekSlider {
+    width: 100%;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
 .progress-bar {
     height: 10px;
     background-color: #ddd;
     margin-top: 10px;
     width: 100%;
     position: relative;
-}
-#seekSlider {
-    width: 100%;
-    height: 100%;
-    appearance: none;
-    background-color: transparent;
-  }
-  
-  #seekSlider::-webkit-slider-thumb {
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    background-color: #000;
-    border-radius: 50%;
     cursor: pointer;
-  }
-  
-  #seekSlider::-moz-range-thumb {
-    width: 12px;
-    height: 12px;
-    background-color: #000;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-.progress {
-    height: 100%;
-    background-color: #4caf50;
-    width: 0%;
-    transition: width 0.2s ease;
 }
 
 *, *:before, *:after {
