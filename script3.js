@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.getElementById('prev-button');
     const nextButton = document.getElementById('next-button');
     const progressBar = document.querySelector('.progress');
+    const nowPlaying = this.document.getElementById('nowPlaying')
     let songSelected = false;
 
     let currentIndex = 0;
@@ -37,6 +38,7 @@ window.addEventListener('DOMContentLoaded', function() {
             songSelected = true;
             audio.play()
             playButton.textContent = 'Pause';
+
         }
         else if (audio.paused) {
             audio.play();
@@ -48,9 +50,13 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   
     prevButton.addEventListener('click', function() {
-        currentIndex = (currentIndex - 1 + playlistItems.length) % playlistItems.length;
-        playSong(playlistItems[currentIndex].getAttribute('data-src'));
-        updatePlaylist();
+        if(audioPlayer.currentTime > 2) {
+            audioPlayer.currentTime = 0;
+        } else {
+            currentIndex = (currentIndex - 1 + playlistItems.length) % playlistItems.length;
+            playSong(playlistItems[currentIndex].getAttribute('data-src'));
+            updatePlaylist();
+        }
     });
   
     nextButton.addEventListener('click', function() {
